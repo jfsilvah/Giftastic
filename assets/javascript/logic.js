@@ -1,4 +1,4 @@
-var gif_themes = ["Incredibles", "Toy Story", "Inside Out", "Lion King","Aladdin","Dumbo"];
+var gif_themes = ["Incredibles", "Toy Story", "Inside Out", "Lion King","Aladdin","Dumbo","Snoopy","Charlie Brown","Kung Fu Panda","How to Train Your Dragon"];
 var lastSearch = " ";
 var limit = 10;
 
@@ -128,7 +128,7 @@ function displayMovieInfo(buttonInfo) {
                     newCol.addClass("col");
                     newCardBlock.addClass("card-block px-2");
                     var ratings = response2.Ratings;
-                    var ratingElement;
+                    var ratingElement = " ";
                     for(var i=0;i<ratings.length;i++){
                         if (i === 0){
                             ratingElement = ratings[i].Source+": "+ratings[i].Value+"<br>";
@@ -152,45 +152,6 @@ function displayMovieInfo(buttonInfo) {
                     $(".movieSection").append(newMovie);
                 })
             }
-/*                <div class="col-lg-6 mb-6">
-                    <div class="card">
-                        <div class="row no-gutters">
-                            <div class="col-auto">
-                                <img src="https://m.media-amazon.com/images/M/MV5BOTc2OTA1MDM4M15BMl5BanBnXkFtZTgwNjczMDk5MjE@._V1_SX300.jpg"
-                                    class="img-fluid" alt="">
-                            </div>
-                            <div class="col">
-                                <div class="card-block px-2">
-                                    <h4 class="card-title">Title</h4>
-                                    <p class="card-text">Description Description Description Description Description Description
-                                        Description
-                                        Description Description Description Description Description Description Description
-                                        Description
-                                        Description Description Description</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            /*<div class="col-lg-6 mb-6">
-            <div class="card flex-row flex-wrap">
-                <div class="card-header border-0">
-                    <img src="https://m.media-amazon.com/images/M/MV5BOTc2OTA1MDM4M15BMl5BanBnXkFtZTgwNjczMDk5MjE@._V1_SX300.jpg"
-                        alt="">
-                </div>
-                <div class="card-block px-2">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Description</p>
-                    <a href="#" class="btn btn-primary">BUTTON</a>
-                </div>
-                <div class="w-100"></div>
-                <div class="card-footer w-100 text-muted">
-                    FOOTER
-                </div>
-            </div>
-        </div>*/
-
         })
     }
 }
