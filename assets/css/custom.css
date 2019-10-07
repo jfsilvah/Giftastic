@@ -1,0 +1,26 @@
+#header{
+    background-image: url("../images/header.jpg");
+    background-size: cover;
+    background-position-y: center;
+}
+
+#gallery{
+    background-color: black;
+    
+}
+
+.body{
+    background-color: black;
+}
+
+.btn{
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+.jumbotron{
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+}
