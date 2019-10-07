@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
     <title>Giftastic</title>
 </head>
-
 <body>
     <nav class="navbar bg-dark navbar-dark">
         <div class="container">
@@ -25,9 +23,20 @@
             <input id="add-element" class="btn btn-primary mb-2" type="submit" value="Add">
         </form>
     </section>
-
     <section id="gallery" class="container">
-        <div class="row gifSection">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="gifs-tab" data-toggle="tab" href="#gifs" role="tab" aria-controls="gifs" aria-selected="true">Animated GIFs</a>
+                <a class="nav-item nav-link" id="movies-tab" data-toggle="tab" href="#movies" role="tab" aria-controls="movies" aria-selected="false">Movie Information</a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="gifs" role="tabpanel" aria-labelledby="gifs-tab">
+                <div class="row gifSection"></div>
+            </div>
+            <div class="tab-pane fade" id="movies" role="tabpanel" aria-labelledby="movies-tab">
+                <div class="row movieSection"></div>
+            </div>
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -37,5 +46,4 @@
     <script src="https://kit.fontawesome.com/99d86a1013.js"></script>
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
 </body>
-
 </html>
