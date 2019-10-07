@@ -1,4 +1,4 @@
-var gif_themes = ["The Matrix", "The Notebook", "Mr. Nobody", "The Lion King5"];
+var gif_themes = ["Up", "Toy Story", "Inside Out", "Lion King","Aladdin","Dumbo"];
 var lastSearch = " ";
 var limit = 10;
 
@@ -19,6 +19,12 @@ function renderButtons() {
 $("#add-element").on("click", function(event) {
     event.preventDefault();
     var buttonExist = false;
+
+    if ($("#add-input").val().trim().length === 0){
+        $("#add-input").val("");
+        return;
+    }
+    
     for(var i=0;i<gif_themes.length;i++){
         if (gif_themes[i] === $("#add-input").val().trim()){
             buttonExist = true;
@@ -29,6 +35,8 @@ $("#add-element").on("click", function(event) {
     if (!buttonExist){
         gif_themes.push($("#add-input").val().trim());
     }
+
+    $("#add-input").val("");
     renderButtons();
 });
 
