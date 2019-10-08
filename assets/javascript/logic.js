@@ -50,7 +50,7 @@ $(document).on("click", ".favorites", function(event){
         });
     }
     for (var i = 0; i < favMovies.length; i++) {
-        var queryURL = "http://www.omdbapi.com/?i=" + favMovies[i] + "&apikey=trilogy";
+        var queryURL = "https://www.omdbapi.com/?i=" + favMovies[i] + "&apikey=trilogy";
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -225,7 +225,7 @@ function displayMovieInfo(buttonInfo) {
             method: "GET"
         }).then(function (response) {
             for (var j = 0; j < response.Search.length; j++) {
-                queryURL = "http://www.omdbapi.com/?i=" + response.Search[j].imdbID + "&apikey=trilogy";
+                queryURL = "https://www.omdbapi.com/?i=" + response.Search[j].imdbID + "&apikey=trilogy";
                 $.ajax({
                     url: queryURL,
                     method: "GET"
