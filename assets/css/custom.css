@@ -25,3 +25,8 @@
     padding-top: 1vw;
 }
 
+.pressedHeart{
+    background-color: red;
+    color: white;
+}
+
